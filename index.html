@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script
       src="https://kit.fontawesome.com/530869a928.js"
@@ -15,9 +20,9 @@
     <header>
       <img src="images/logo/Reservia.svg" alt="logo" />
       <nav>
-        <a href="#hébergements">Hébergements</a>
+        <a class="textblue" href="#hébergements">Hébergements</a>
         <a href="#activités">Activités</a>
-        <a href="">S'inscrire</a>
+        <a class="textblue" id="inscription" href="">S'inscrire</a>
       </nav>
     </header>
 
@@ -27,18 +32,23 @@
         Trouvez votre hébergement pour des vacances de rêves
       </h1>
       <p>En plein centre ville ou en pleine nature</p>
-      <div id="Rechercher">
-        <i class="fas fa-map-marker-alt"></i>
+      <div id="rechercher">
         <form>
-          <input
-            type="text"
-            id="recherche"
-            name="recherche"
-            placeholder="Marseille,France"
-          />
-          <input type="submit" value="Rechercher" />
+          <div id="re">
+            <span class="input_icon"
+              ><i class="fas fa-map-marker-alt"></i
+            ></span>
+            <input
+              type="text"
+              id="recherche"
+              name="recherche"
+              placeholder="Marseille,France"
+            />
+          </div>
+          <input type="submit" id="sub" value="Rechercher" />
         </form>
       </div>
+
       <div id="filters">
         <h2>Filtres</h2>
         <ul>

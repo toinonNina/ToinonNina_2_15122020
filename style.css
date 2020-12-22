@@ -1,6 +1,94 @@
+body {
+  font-family: "Raleway", sans-serif;
+  width: 1339px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+a:link {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
 .blue {
   color: #0065fc;
 }
 .grey {
   color: #eaeaea;
+}
+
+a.textblue {
+  color: #0065fc;
+}
+
+/*--------header--------*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+header img {
+}
+nav {
+  flex: 2;
+
+  text-align: right;
+}
+
+nav a {
+  margin: 0 40px 0 40px;
+}
+#inscription {
+  font-weight: bolder;
+}
+
+/*---------section 1 --------*/
+#section_one {
+  border: 1px solid black;
+}
+
+#section_one p {
+  margin-top: 10px;
+}
+#rechercher {
+  display: flex;
+}
+.input_icon {
+  margin-right: -5px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+#sub {
+  margin-left: -5px;
+  background-color: #0065fc;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  padding: 7px 4px;
+}
+#recherche {
+  padding: 6px 10px;
+  align-items: baseline;
+  border: 1px solid #f2f2f2;
+}
+#re {
+  display: inline;
+  background-color: #f2f2f2;
+  border-radius: 10px 0px 0px 10px;
+  padding: 4px 0px 7px 0px;
 }
