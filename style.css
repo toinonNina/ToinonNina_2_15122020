@@ -1,8 +1,11 @@
 body {
   font-family: "Raleway", sans-serif;
+}
+main {
   width: 1332px;
   margin: auto;
-  border: white solid 50px;
+  border-right: white solid 50px;
+  border-left: white solid 50px;
 }
 h1 {
   font-size: 1.5em;
@@ -72,6 +75,7 @@ nav a {
   border: none;
   padding: 7px 7px;
   color: white;
+  cursor: pointer;
 }
 #recherche {
   padding: 6px 10px;
@@ -141,7 +145,7 @@ ul {
 }
 #logement {
   display: grid;
-  grid-template-columns: 240px 240px 240px;
+  grid-template-columns: 250px 250px 250px;
   margin: 0 0 0 43px;
   column-gap: 31px;
   row-gap: 31px;
@@ -155,7 +159,7 @@ ul {
 }
 .card img {
   object-fit: cover;
-  width: 232px;
+  width: 243px;
   height: 110px;
   border-radius: 20px 20px 0 0;
 }
@@ -183,8 +187,6 @@ ul {
   border: white solid 4px;
   box-shadow: 0 0 1em #d9d9d9;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
   width: 300px;
 }
 .card2 img {
@@ -215,11 +217,121 @@ ul {
 }
 #act {
   display: grid;
-  grid-template-columns: 240px 240px 240px;
-  margin: 0 0 0 40px;
-  column-gap: 30px;
-  row-gap: 30px;
+  grid-template-columns: 300px 300px 300px 300px;
+  column-gap: 45px;
+  row-gap: 40px;
+}
+/*--------section 3------*/
+#activites {
+  margin-top: 30px;
+}
+#activites h3 {
+  padding: 0;
+}
+.activité {
+  display: inline-block;
+}
+
+.card3 {
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+
+  box-shadow: 0 0 1em #d9d9d9;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 440px;
+}
+
+.card4 {
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+
+  box-shadow: 0 0 1em #d9d9d9;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 240px;
+}
+.card5 {
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+
+  box-shadow: 0 0 1em #d9d9d9;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 205px;
+}
+
+.card6 {
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+
+  box-shadow: 0 0 1em #d9d9d9;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 170px;
+}
+.card5 img {
+  object-fit: cover;
+  width: 300px;
+  height: 150px;
+  border-radius: 20px 20px 0px 0px;
+  vertical-align: top;
+}
+
+.card3 img {
+  object-fit: cover;
+  width: 300px;
+  height: 390px;
+  border-radius: 20px 20px 0px 0px;
+  vertical-align: top;
+  flex-direction: column;
+}
+.card4 img {
+  object-fit: cover;
+  width: 300px;
+  height: 180px;
+  border-radius: 20px 20px 0px 0px;
+  vertical-align: top;
+  flex-direction: column;
+}
+
+.card6 img {
+  object-fit: cover;
+  width: 300px;
+  height: 120px;
+  border-radius: 20px 20px 0px 0px;
+  vertical-align: top;
+  flex-direction: column;
+}
+
+#activites h4 {
+  padding-left: 10px;
+  padding-top: 20px;
 }
 footer {
   background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1442px;
+  margin: auto;
+  justify-content: flex-start;
+}
+footer div {
+  margin: 20px 150px 0px 60px;
+}
+
+footer ul {
+  display: inline-block;
+
+  list-style: none;
+}
+
+footer li {
+  margin-left: -40px;
+  font-size: 1em;
+  padding-bottom: 5px;
+}
+h5 {
+  font-size: 1em;
+  margin: 0;
 }
