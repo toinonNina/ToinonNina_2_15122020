@@ -33,7 +33,6 @@ h5 {
   padding-left: 10px;
   padding-top: 20px;
 }
-
 a:link {
   text-decoration: none;
   list-style: none;
@@ -51,7 +50,7 @@ a.textblue {
 span {
   font-weight: bolder;
 }
-
+/*--------------------HEADER-----------------------------------*/
 .header {
   display: grid;
   grid-template-columns: repeat(12, 75px);
@@ -59,23 +58,23 @@ span {
   align-items: center;
 }
 
-.col-xs-10.col-sm-1 {
+.navigation {
   grid-column: 9 / span 2;
   display: flex;
   justify-content: space-around;
   margin: 0 0px 0 60px;
 }
 
-.col-xs-10.col-sm-1 a {
+.navigation a {
   margin: 0 70px 0 0px;
 }
 
-.col-sm-10 {
+.inscrit {
   font-weight: bolder;
   grid-column: 11;
   margin: 0 0px 0 70px;
 }
-
+/*--------------------SECTION 1-----------------------------------*/
 #section_one {
   display: grid;
 }
@@ -98,7 +97,6 @@ span {
   border-radius: 0 10px 10px 0;
   border: none;
   padding: 7px 7px;
-
   cursor: pointer;
 }
 
@@ -176,7 +174,7 @@ ul {
   padding: 5px 10px;
   border-radius: 20px 20px 20px 20px;
 }
-
+/*--------------------SECTION 2-----------------------------------*/
 #principal {
   display: grid;
   grid-template-columns: 830px 340px;
@@ -194,11 +192,6 @@ ul {
   margin: 0 20px 0 20px;
   column-gap: 31px;
   row-gap: 31px;
-}
-
-#populaires {
-  background-color: #f2f2f2;
-  border-radius: 20px 20px;
 }
 
 .card {
@@ -225,6 +218,11 @@ ul {
   padding-top: 30px;
   padding-left: 40px;
   cursor: pointer;
+}
+/*--------------------SECTION POPULAIRE-----------------------------------*/
+#populaires {
+  background-color: #f2f2f2;
+  border-radius: 20px 20px;
 }
 
 .card2 {
@@ -264,6 +262,8 @@ ul {
 .star2 {
   padding-top: 50px;
 }
+
+/*--------------------SECTION 3----------------------------------*/
 #section3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -373,13 +373,14 @@ footer li {
   font-size: 1em;
   padding-bottom: 5px;
 }
-
-@media (min-width: 320px) and (max-width: 580px) {
+/*-------------------RESPONSIVE ----------------------------------*/
+/*-------------MOBILE----------------------------*/
+@media (min-width: 320px) and (max-width: 480px) {
   body {
     width: auto;
-    border: 2px solid red;
   }
   .container {
+    padding-top: 10px;
     border: 0;
   }
 
@@ -409,64 +410,64 @@ footer li {
     padding-left: 10px;
     padding-top: 20px;
   }
-
   .header {
-    display: grid;
     grid-template-columns: repeat(11, 1px);
-    column-gap: 30px;
+    column-gap: 0px;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    grid-template-rows: auto;
     width: auto;
   }
-
-  .col-xs-10.col-sm-1 {
-    grid-column: 3 / span 8;
-    order: 2;
-    margin: 10px 10px 10px -30px;
+  .navigation {
+    grid-column: 6;
+    grid-row: 2;
+    order: 3;
+    margin: 10px 0px 10px 0px;
   }
-
-  .col-xs-10.col-sm-1 a {
-    margin: 0px 0px 0px 0px;
+  .navigation a {
+    margin: 0;
   }
-  .col-xs-10.col-sm-1 a:hover {
+  .navigation a:hover {
     border-bottom: 1px solid blue;
   }
-  .col-sm-10 {
-    font-weight: bolder;
-    grid-column: 6;
+
+  header img {
     order: 1;
-    margin-left: 80px;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 10px;
+  }
+  .inscrit {
+    font-weight: bolder;
+    grid-column: 6 / span 3;
+    order: 2;
+    grid-row: 1;
+    text-align: right;
+    margin-right: 80px;
   }
 
   #order1 {
-    padding: 20px 45px;
+    padding: 20px 25px 20px 20px;
   }
-
   #order2 {
-    padding: 20px 40px 20px 55px;
+    padding: 20px 30px 20px 55px;
   }
-
-  /*link actif
+  /*link actif SOULIGNEMENT Besoin de précision sur la consigne
   .col-xs-10.col-sm-1 :link {
     border-bottom: 1px solid grey;
   }
-  
   */
-
-  .col-xs-10.col-sm-1 #order1:link {
+  .navigation #order1:link {
     border-bottom: 1px solid blue;
   }
-
-  .col-xs-10.col-sm-1 #order2:link {
+  .navigation #order2:link {
     border-bottom: 1px solid #f2f2f2;
   }
-
   #section_one {
     width: auto;
     display: block;
   }
-
   #section_one p {
     padding-left: 20px;
   }
@@ -474,9 +475,8 @@ footer li {
   #rechercher {
     padding: 0 0px 0 15px;
   }
-
   #recherche {
-    padding: 10px 15px;
+    padding: 15px 10px;
   }
   #subi {
     display: none;
@@ -485,15 +485,13 @@ footer li {
     border-radius: 10px 10px 10px 10px;
   }
   .loupe {
-    display: inline;
+    display: inline-block;
     color: white;
-    padding: 5px 5px;
+    padding: 5px 10px;
   }
-
   #filters h2 {
     margin-top: 20px;
   }
-
   #filters {
     display: inline;
   }
@@ -504,22 +502,21 @@ footer li {
   }
   .cadr {
     margin: 0 10px 0 0px;
-    justify-content: none;
   }
-
   .filtrblue {
     padding: 10px;
     margin-right: 5px;
   }
-
   #filters li {
     margin: 0px 10px 10px 0;
   }
-
   #information {
     display: flex;
     align-items: baseline;
     padding-left: 20px;
+  }
+  #information p {
+    margin-left: -15px;
   }
 
   .info {
@@ -530,17 +527,14 @@ footer li {
     flex-direction: column-reverse;
     row-gap: 10px;
   }
-
   #hebergements {
     background-color: white;
     width: auto;
   }
-
   #logement {
     display: flex;
     flex-direction: column;
   }
-
   .card {
     width: auto;
   }
@@ -569,17 +563,14 @@ footer li {
   .graph {
     margin-left: 30%;
   }
-
   #activites {
     margin-left: 15px;
     margin-right: 25px;
   }
-
   #section3 {
     display: flex;
     flex-direction: column;
   }
-
   .card3,
   .card4,
   .card5,
@@ -601,19 +592,414 @@ footer li {
     height: 110px;
     border-radius: 20px 20px 0 0;
   }
-
   .card p {
     margin: 0;
     font-size: 0.9em;
   }
-
   .card3 {
     margin-bottom: 0;
   }
   .card6 {
     margin-bottom: 0;
   }
+  footer div {
+    margin: 20px 50px 0px 20px;
+  }
+}
 
+/*-------------TABLETTE----------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    width: auto;
+  }
+  .container {
+    border: 20px solid white;
+  }
+  .header {
+    grid-template-columns: repeat(11, 1px);
+    column-gap: 0px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-template-rows: auto;
+    width: auto;
+  }
+  .navigation {
+    margin: 10px 0px 10px 0px;
+    grid-column: 8;
+    grid-row: 1;
+  }
+  .navigation a {
+    margin: 0 20px 0 10px;
+  }
+  .navigation a:hover {
+    border-bottom: 1px solid blue;
+  }
+
+  header img {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 10px;
+  }
+  .inscrit {
+    font-weight: bolder;
+    grid-column: 9;
+    grid-row: 1;
+    margin-right: 0px;
+  }
+
+  #section_one {
+    width: auto;
+    display: block;
+  }
+  #section_one p {
+    padding-left: 20px;
+  }
+
+  #rechercher {
+    padding: 0 0px 0 15px;
+  }
+  #recherche {
+    padding: 15px 30px;
+  }
+  #search {
+  }
+
+  #subi {
+    display: none;
+  }
+  #sub {
+    border-radius: 10px 10px 10px 10px;
+  }
+  .loupe {
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+  }
+  #filters h2 {
+    margin-top: 20px;
+  }
+  #filters {
+    display: inline;
+  }
+
+  #filters ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cadr {
+    margin: 0 10px 0 0px;
+  }
+  .filtrblue {
+    padding: 10px;
+    margin-right: 5px;
+  }
+  #filters li {
+    margin: 0px 10px 10px 0;
+  }
+  #information {
+    display: flex;
+    align-items: baseline;
+    padding-left: 20px;
+  }
+  #information p {
+    margin-left: -15px;
+  }
+
+  .info {
+    padding: 5px 10px;
+  }
+  #principal {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
+  #hebergements {
+    background-color: white;
+    width: auto;
+  }
+  #logement {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+  }
+  .card {
+    width: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+  #plus {
+    background: none;
+  }
+  #populaires {
+    font-size: 0.9em;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .card2 img {
+    width: 40%;
+  }
+  .card2 {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #principal h3 {
+    padding-left: 20px;
+  }
+  .graph {
+    margin-left: 70%;
+
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .comment {
+    display: inline-block;
+    width: auto;
+    padding-top: 10px;
+    font-size: 1.3em;
+  }
+  #activites {
+    margin-left: 15px;
+    margin-right: 25px;
+  }
+  #section3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    border: white solid 4px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 1em #d9d9d9;
+    width: 100%;
+    height: 100%;
+  }
+  .card3 img,
+  .card4 img,
+  .card5 img,
+  .card6 img {
+    object-fit: cover;
+    width: 100%;
+    height: 110px;
+    border-radius: 20px 20px 0 0;
+  }
+  .card p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  .card3 {
+    margin-bottom: 0;
+  }
+  .card6 {
+    margin-bottom: 0;
+  }
+  footer div {
+    margin: 20px 50px 0px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1324px) and (orientation: landscape) {
+  /* CSS */
+  body {
+    width: auto;
+  }
+  .container {
+    border: 20px solid white;
+  }
+  .header {
+    grid-template-columns: repeat(11, 1px);
+    column-gap: 0px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-template-rows: auto;
+    width: auto;
+  }
+  .navigation {
+    margin: 10px 0px 10px 0px;
+    grid-column: 8;
+    grid-row: 1;
+  }
+  .navigation a {
+    margin: 0 20px 0 10px;
+  }
+  .navigation a:hover {
+    border-bottom: 1px solid blue;
+  }
+
+  header img {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 10px;
+  }
+  .inscrit {
+    font-weight: bolder;
+    grid-column: 9;
+    grid-row: 1;
+    margin-right: 0px;
+  }
+
+  #section_one {
+    width: auto;
+    display: block;
+  }
+  #section_one p {
+    padding-left: 20px;
+  }
+
+  #rechercher {
+    padding: 0 0px 0 15px;
+  }
+  #recherche {
+    padding: 15px 30px;
+  }
+  #search {
+  }
+
+  #subi {
+    display: none;
+  }
+  #sub {
+    border-radius: 10px 10px 10px 10px;
+  }
+  .loupe {
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+  }
+  #filters h2 {
+    margin-top: 20px;
+  }
+  #filters {
+    display: inline;
+  }
+
+  #filters ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cadr {
+    margin: 0 10px 0 0px;
+  }
+  .filtrblue {
+    padding: 10px;
+    margin-right: 5px;
+  }
+  #filters li {
+    margin: 0px 10px 10px 0;
+  }
+  #information {
+    display: flex;
+    align-items: baseline;
+    padding-left: 20px;
+  }
+  #information p {
+    margin-left: -15px;
+  }
+
+  .info {
+    padding: 5px 10px;
+  }
+  #principal {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
+  #hebergements {
+    background-color: white;
+    width: auto;
+  }
+  #logement {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+  }
+  .card {
+    width: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+  #plus {
+    background: none;
+  }
+  #populaires {
+    font-size: 0.9em;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .card2 img {
+    width: 40%;
+  }
+  .card2 {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #principal h3 {
+    padding-left: 20px;
+  }
+  .graph {
+    margin-left: 70%;
+
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .comment {
+    display: inline-block;
+    width: auto;
+    padding-top: 10px;
+    font-size: 1.3em;
+  }
+  #activites {
+    margin-left: 15px;
+    margin-right: 25px;
+  }
+  #section3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    border: white solid 4px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 1em #d9d9d9;
+    width: 100%;
+    height: 100%;
+  }
+  .card3 img,
+  .card4 img,
+  .card5 img,
+  .card6 img {
+    object-fit: cover;
+    width: 100%;
+    height: 110px;
+    border-radius: 20px 20px 0 0;
+  }
+  .card p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  .card3 {
+    margin-bottom: 0;
+  }
+  .card6 {
+    margin-bottom: 0;
+  }
   footer div {
     margin: 20px 50px 0px 20px;
   }
