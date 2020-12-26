@@ -865,13 +865,13 @@ footer li {
   }
 
   #subi {
-    display: none;
+    display: block;
   }
   #sub {
     border-radius: 10px 10px 10px 10px;
   }
   .loupe {
-    display: inline-block;
+    display: none;
     color: white;
     padding: 5px 10px;
   }
