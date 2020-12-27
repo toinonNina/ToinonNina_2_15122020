@@ -1017,9 +1017,6 @@ footer li {
 }
 
 @media (min-width: 1025px) {
-  body {
-    width: auto;
-  }
   .container {
     border: 20px solid white;
   }
