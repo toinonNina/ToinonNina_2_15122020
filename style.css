@@ -7,6 +7,11 @@ body {
 .container {
   border-right: white solid 50px;
   border-left: white solid 50px;
+  border-top: white solid 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 80px);
+  grid-template-rows: auto;
+  column-gap: 25px;
 }
 
 h1 {
@@ -18,12 +23,10 @@ h2 {
 }
 h3 {
   padding-left: 40px;
-  display: inline-block;
 }
 h4 {
-  margin: 0;
-  font-size: 1em;
-  display: flex;
+  margin: 0px;
+  font-size: 0.9em;
 }
 h5 {
   font-size: 1em;
@@ -51,40 +54,50 @@ span {
   font-weight: bolder;
 }
 /*--------------------HEADER-----------------------------------*/
-.header {
-  display: grid;
-  grid-template-columns: repeat(12, 75px);
-  column-gap: 30px;
+header {
+  grid-column: 1 / span 12;
+  grid-row: 1;
+
   align-items: center;
+  display: inline-grid;
+}
+.inscrit {
+  font-weight: bolder;
+
+  grid-column: 12;
+}
+.navigation {
+  grid-column: 11;
+  grid-row: 1;
 }
 
-.navigation {
-  grid-column: 9 / span 2;
+.navigation ul {
+  list-style-type: none;
   display: flex;
-  justify-content: space-around;
-  margin: 0 0px 0 60px;
 }
 
 .navigation a {
-  margin: 0 70px 0 0px;
+  margin: 0 0px 0 50px;
+  justify-content: space-around;
 }
 
-.inscrit {
-  font-weight: bolder;
-  grid-column: 11;
-  margin: 0 0px 0 70px;
+#order1 {
+  font-weight: 500;
 }
+
 /*--------------------SECTION 1-----------------------------------*/
-#section_one {
-  display: grid;
-}
 
+#section_one {
+  grid-column: 1 / span 12;
+  grid-row: 2;
+}
 #section_one p {
   margin-top: 10px;
   font-size: 0.8em;
 }
 #rechercher {
   display: flex;
+  flex-wrap: wrap;
 }
 .input_icon {
   margin-right: -5px;
@@ -107,7 +120,7 @@ span {
   border: none;
   padding: 7px 7px;
   color: white;
-  cursor: pointer;
+  font-size: 1em;
 }
 
 .fa.loupe {
@@ -118,6 +131,7 @@ span {
   padding: 15px 10px;
   align-items: baseline;
   border: #f2f2f2 solid 1px;
+  width: 170px;
 }
 #search {
   display: inline;
@@ -128,25 +142,29 @@ span {
   color: black;
   font-size: 1.5em;
 }
-#filters,
-ul {
+#filters {
+  grid-column: 1;
+  grid-row: 3;
   display: flex;
   align-items: center;
+  flex-direction: row;
+
   padding-top: 10px;
 }
 #filters ul {
+  display: flex;
   list-style: none;
   font-size: 1em;
   font-weight: bolder;
-  margin-left: -20px;
 }
 #filters h2 {
   padding-left: 10px;
+  margin-right: 0px;
 }
 #filters li {
   border: #d9d9d9 solid 1px;
   border-radius: 30px 30px 30px 30px;
-  margin: 0px 30px 0 0;
+  margin: 0px 20px 0 0;
 }
 .filtrblue {
   color: #0065fc;
@@ -154,6 +172,14 @@ ul {
   padding: 15px;
   border-radius: 30px 30px 30px 30px;
   margin-right: 10px;
+}
+
+#filters li:hover {
+  background-color: rgb(48, 113, 199);
+  border-radius: 30px 30px 30px 30px;
+}
+#filters .cadr a:hover {
+  color: white;
 }
 .cadr {
   flex-wrap: wrap;
@@ -173,25 +199,29 @@ ul {
   border: #d9d9d9 solid 1px;
   padding: 5px 10px;
   border-radius: 20px 20px 20px 20px;
+  margin-left: 10px;
 }
+
 /*--------------------SECTION 2-----------------------------------*/
 #principal {
+  grid-column: 1 / span 12;
+  grid-row: 3;
   display: grid;
-  grid-template-columns: 830px 340px;
-  column-gap: 50px;
+  grid-template-columns: 5fr 2fr;
+  column-gap: 20px;
 }
 
 #hebergements {
   background-color: #f2f2f2;
   border-radius: 20px 20px 20px 20px;
-  width: 840px;
+  width: 100%;
 }
 #logement {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 20px 0 20px;
-  column-gap: 31px;
-  row-gap: 31px;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
 .card {
@@ -203,12 +233,16 @@ ul {
 }
 .card img {
   object-fit: cover;
-  width: 240px;
+  width: 250px;
   height: 110px;
   border-radius: 20px 20px 0 0;
 }
+.card h4 {
+  margin-left: 5px;
+}
 .card p {
   margin: 0;
+  padding-left: 5px;
   font-size: 0.9em;
 }
 #plus {
@@ -217,8 +251,14 @@ ul {
   font-size: 1.2em;
   padding-top: 30px;
   padding-left: 40px;
+  margin-top: 30px;
   cursor: pointer;
 }
+
+.star {
+  margin-left: 5px;
+}
+
 /*--------------------SECTION POPULAIRE-----------------------------------*/
 #populaires {
   background-color: #f2f2f2;
@@ -231,10 +271,10 @@ ul {
   border: white solid 2px;
   box-shadow: 0 0 1em #d9d9d9;
   margin-bottom: 30px;
-  width: 300px;
+  width: 310px;
   display: block;
   height: 140px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .card2 img {
   object-fit: cover;
@@ -245,7 +285,7 @@ ul {
 }
 .comment {
   display: inline-block;
-  padding-left: 10px;
+  padding-left: 5px;
   vertical-align: top;
   width: 140px;
 }
@@ -254,7 +294,12 @@ ul {
   font-size: 0.9em;
 }
 .graph {
-  margin-left: 25%;
+  margin-right: 25px;
+}
+
+#populaires h3 {
+  display: flex;
+  justify-content: space-between;
 }
 .star {
   padding-top: 10px;
@@ -264,18 +309,21 @@ ul {
 }
 
 /*--------------------SECTION 3----------------------------------*/
+
+#activites {
+  grid-column: 1 / span 12;
+  grid-row: 4;
+  margin-top: 20px;
+}
+#activites h3 {
+  padding: 10px;
+}
+
 #section3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 40px;
-}
-
-#activites {
-  margin-top: 30px;
-}
-#activites h3 {
-  padding: 0;
 }
 
 .card3 {
@@ -303,9 +351,8 @@ ul {
   box-shadow: 0 0 1em #d9d9d9;
   margin-bottom: 30px;
   width: 290px;
-  height: 205px;
+  height: 170px;
 }
-
 .card6 {
   background-color: white;
   border-radius: 20px 20px 20px 20px;
@@ -313,14 +360,7 @@ ul {
   box-shadow: 0 0 1em #d9d9d9;
   margin-bottom: 30px;
   width: 290px;
-  height: 170px;
-}
-.card5 img {
-  object-fit: cover;
-  width: 290px;
-  height: 150px;
-  border-radius: 20px 20px 0px 0px;
-  vertical-align: top;
+  height: 205px;
 }
 
 .card3 img {
@@ -340,13 +380,21 @@ ul {
   flex-direction: column;
 }
 
-.card6 img {
+.card5 img {
   object-fit: cover;
   width: 290px;
   height: 120px;
   border-radius: 20px 20px 0px 0px;
   vertical-align: top;
   flex-direction: column;
+}
+
+.card6 img {
+  object-fit: cover;
+  width: 290px;
+  height: 150px;
+  border-radius: 20px 20px 0px 0px;
+  vertical-align: top;
 }
 
 /*----------footer-------------*/
@@ -374,131 +422,101 @@ footer li {
   padding-bottom: 5px;
 }
 /*-------------------RESPONSIVE ----------------------------------*/
-/*-------------MOBILE----------------------------*/
+
 @media (min-width: 320px) and (max-width: 480px) {
   body {
     width: auto;
   }
   .container {
-    padding-top: 10px;
-    border: 0;
+    border-top: white solid 10px;
+    border-right: 0;
+    border-left: white solid 2px;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 9px;
   }
 
   h1 {
     font-size: 1.3em;
-    margin-bottom: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  h2 {
-    font-size: 1em;
-  }
-  h3 {
-    padding-left: 40px;
-    display: inline-block;
-  }
-  h4 {
-    margin: 0;
-    font-size: 1em;
-    display: flex;
-  }
-  h5 {
-    font-size: 1em;
-    margin: 0;
-  }
-  #activites h4 {
-    padding-left: 10px;
-    padding-top: 20px;
-  }
-  .header {
-    grid-template-columns: repeat(11, 1px);
-    column-gap: 0px;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    grid-template-rows: auto;
-    width: auto;
-  }
-  .navigation {
-    grid-column: 6;
-    grid-row: 2;
-    order: 3;
-    margin: 10px 0px 10px 0px;
-  }
-  .navigation a {
-    margin: 0;
-  }
-  .navigation a:hover {
-    border-bottom: 1px solid blue;
   }
 
   header img {
     order: 1;
-    grid-column: 1;
-    grid-row: 1;
-    margin-left: 10px;
   }
   .inscrit {
-    font-weight: bolder;
-    grid-column: 6 / span 3;
     order: 2;
-    grid-row: 1;
-    text-align: right;
-    margin-right: 80px;
+    margin-right: 10px;
   }
 
-  #order1 {
-    padding: 20px 25px 20px 20px;
+  .navigation {
+    order: 3;
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+
+    border: 0px solid blue;
   }
-  #order2 {
-    padding: 20px 30px 20px 55px;
+
+  .navigation a {
+    margin: 0;
   }
-  /*link actif SOULIGNEMENT Besoin de précision sur la consigne
-  .col-xs-10.col-sm-1 :link {
-    border-bottom: 1px solid grey;
+  .navigation ul {
+    border: 0px solid blue;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  */
+  .navigation li {
+    text-align: center;
+  }
   .navigation #order1:link {
     border-bottom: 1px solid blue;
+    padding: 15px 19px;
+    display: inline-flex;
   }
   .navigation #order2:link {
-    border-bottom: 1px solid #f2f2f2;
-  }
-  #section_one {
-    width: auto;
-    display: block;
-  }
-  #section_one p {
-    padding-left: 20px;
+    border-bottom: 1px solid #f2f2f2f2;
+
+    padding: 15px 40px;
+    display: inline-flex;
   }
 
-  #rechercher {
-    padding: 0 0px 0 15px;
+  #section_one {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    padding-left: 15px;
+    padding-right: 10px;
   }
-  #recherche {
-    padding: 15px 10px;
+
+  #sub {
+    vertical-align: baseline;
   }
+
   #subi {
     display: none;
   }
-  #sub {
-    border-radius: 10px 10px 10px 10px;
-  }
   .fa.loupe {
-    display: inline-block;
     color: white;
-    padding: 5px 10px;
+    display: flex;
+    padding: 10px 10px 0 10px;
   }
-  #filters h2 {
-    margin-top: 20px;
+  #recherche {
+    width: 170px;
   }
   #filters {
     display: inline;
   }
-
   #filters ul {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -40px;
+  }
+
+  #filters h2 {
+    padding-left: 0;
+    margin-right: 0;
   }
   .cadr {
     margin: 0 10px 0 0px;
@@ -508,20 +526,18 @@ footer li {
     margin-right: 5px;
   }
   #filters li {
-    margin: 0px 10px 10px 0;
+    margin: 0px 5px 10px 0px;
   }
   #information {
     display: flex;
     align-items: baseline;
-    padding-left: 20px;
-  }
-  #information p {
-    margin-left: -15px;
   }
 
   .info {
     padding: 5px 10px;
+    margin-left: 5px;
   }
+
   #principal {
     display: flex;
     flex-direction: column-reverse;
@@ -544,6 +560,7 @@ footer li {
   }
   #plus {
     background: none;
+    margin-left: -5%;
   }
   #populaires {
     font-size: 0.9em;
@@ -559,9 +576,14 @@ footer li {
   }
   #principal h3 {
     padding-left: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+
   .graph {
-    margin-left: 30%;
+    margin-right: 10px;
   }
   #activites {
     margin-left: 15px;
@@ -599,7 +621,7 @@ footer li {
   .card3 {
     margin-bottom: 0;
   }
-  .card6 {
+  .card5 {
     margin-bottom: 0;
   }
   footer div {
@@ -614,38 +636,9 @@ footer li {
   }
   .container {
     border: 20px solid white;
-  }
-  .header {
-    grid-template-columns: repeat(11, 1px);
-    column-gap: 0px;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    width: auto;
-  }
-  .navigation {
-    margin: 10px 0px 10px 0px;
-    grid-column: 8;
-    grid-row: 1;
-  }
-  .navigation a {
-    margin: 0 20px 0 10px;
-  }
-  .navigation a:hover {
-    border-bottom: 1px solid blue;
-  }
-
-  header img {
-    grid-column: 1;
-    grid-row: 1;
-    margin-left: 10px;
-  }
-  .inscrit {
-    font-weight: bolder;
-    grid-column: 9;
-    grid-row: 1;
-    margin-right: 0px;
+    column-gap: 25px;
   }
 
   #section_one {
@@ -664,15 +657,13 @@ footer li {
   }
 
   #subi {
-    display: none;
+    display: block;
   }
   #sub {
     border-radius: 10px 10px 10px 10px;
   }
   .fa.loupe {
-    display: inline;
-    color: white;
-    padding: 10px 10px;
+    display: none;
   }
   #filters h2 {
     margin-top: 20px;
@@ -716,17 +707,11 @@ footer li {
     background-color: white;
     width: auto;
   }
-  #logement {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-  }
   .card {
-    width: auto;
+    width: 210px;
   }
-
   .card img {
-    width: 100%;
+    width: 210px;
   }
   #plus {
     background: none;
@@ -766,9 +751,10 @@ footer li {
   }
   #section3 {
     display: flex;
-    flex-direction: column;
+
+    justify-content: space-around;
   }
-  .card3,
+
   .card4,
   .card5,
   .card6 {
@@ -778,15 +764,31 @@ footer li {
     padding-bottom: 10px;
     box-shadow: 0 0 1em #d9d9d9;
     width: 100%;
-    height: 100%;
+    height: 40%;
   }
-  .card3 img,
+  .card3 {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    border: white solid 4px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 1em #d9d9d9;
+    width: 70%;
+    height: 70%;
+  }
+
   .card4 img,
   .card5 img,
   .card6 img {
     object-fit: cover;
     width: 100%;
-    height: 110px;
+    height: 70px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card3 img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
     border-radius: 20px 20px 0 0;
   }
   .card p {
@@ -796,15 +798,19 @@ footer li {
   .card3 {
     margin-bottom: 0;
   }
-  .card6 {
+  .card5 {
     margin-bottom: 0;
   }
+  footer {
+    background-color: #f2f2f2;
+  }
   footer div {
-    margin: 20px 50px 0px 20px;
+    margin: 20px 10px 0px 60px;
+    flex-direction: row;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1324px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* CSS */
   body {
     width: auto;
@@ -911,15 +917,9 @@ footer li {
     background-color: white;
     width: auto;
   }
-  #logement {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-  }
   .card {
-    width: auto;
+    width: 100%;
   }
-
   .card img {
     width: 100%;
   }
@@ -961,9 +961,10 @@ footer li {
   }
   #section3 {
     display: flex;
-    flex-direction: column;
+
+    justify-content: space-around;
   }
-  .card3,
+
   .card4,
   .card5,
   .card6 {
@@ -973,15 +974,31 @@ footer li {
     padding-bottom: 10px;
     box-shadow: 0 0 1em #d9d9d9;
     width: 100%;
-    height: 100%;
+    height: 40%;
   }
-  .card3 img,
+  .card3 {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    border: white solid 4px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 1em #d9d9d9;
+    width: 70%;
+    height: 70%;
+  }
+
   .card4 img,
   .card5 img,
   .card6 img {
     object-fit: cover;
     width: 100%;
-    height: 110px;
+    height: 70px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card3 img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
     border-radius: 20px 20px 0 0;
   }
   .card p {
@@ -991,14 +1008,21 @@ footer li {
   .card3 {
     margin-bottom: 0;
   }
-  .card6 {
+  .card5 {
     margin-bottom: 0;
   }
   footer div {
-    margin: 20px 50px 0px 20px;
+    margin: 20px 200px 0px 20px;
   }
 }
-@media (min-width: 1281px) {
+
+@media (min-width: 1025px) {
+  body {
+    width: auto;
+  }
+  .container {
+    border: 20px solid white;
+  }
   #subi {
     display: inline;
   }
