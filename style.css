@@ -1017,7 +1017,9 @@ footer li {
 }
 
 @media (min-width: 1025px) {
- 
+ .container {
+    border: 20px solid white;
+  }
   #subi {
     display: inline;
   }
