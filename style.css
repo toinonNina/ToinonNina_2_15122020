@@ -22,7 +22,7 @@ h2 {
   font-size: 1em;
 }
 h3 {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 h4 {
   margin: 0px;
@@ -36,7 +36,7 @@ h5 {
   padding-left: 10px;
   padding-top: 20px;
 }
-a:link {
+a {
   text-decoration: none;
   list-style: none;
   color: black;
@@ -51,7 +51,7 @@ a.textblue {
   color: #0065fc;
 }
 span {
-  font-weight: bolder;
+  font-weight: 600;
 }
 /*--------------------HEADER-----------------------------------*/
 header {
@@ -61,10 +61,21 @@ header {
   align-items: center;
   display: inline-grid;
 }
+header img {
+  padding-left: 10px;
+}
+
 .inscrit {
-  font-weight: bolder;
+  font-weight: 600;
 
   grid-column: 12;
+}
+#inscription {
+  padding: 10px;
+}
+
+#inscription:hover {
+  border-top: 1px solid #0065fc;
 }
 nav {
   grid-column: 11;
@@ -79,10 +90,15 @@ nav ul {
 nav a {
   margin: 0 0px 0 50px;
   justify-content: space-around;
+  padding: 10px;
 }
 
 #order1 {
   font-weight: 500;
+}
+
+nav a:hover {
+  border-top: 1px solid #0065fc;
 }
 
 /*--------------------SECTION 1-----------------------------------*/
@@ -94,6 +110,7 @@ nav a {
 #section_one p {
   margin-top: 10px;
   font-size: 0.8em;
+  margin-bottom: 15px;
 }
 #rechercher {
   display: flex;
@@ -155,7 +172,7 @@ nav a {
   display: flex;
   list-style: none;
   font-size: 1em;
-  font-weight: bolder;
+  font-weight: 600;
 }
 #filters h2 {
   padding-left: 10px;
@@ -175,7 +192,7 @@ nav a {
 }
 
 #filters li:hover {
-  background-color: rgb(48, 113, 199);
+  background-color: #0065fc;
   border-radius: 30px 30px 30px 30px;
 }
 #filters .cadr a:hover {
@@ -188,7 +205,7 @@ nav a {
 }
 #information {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 #information p {
   padding-left: 10px;
@@ -199,7 +216,6 @@ nav a {
   border: #d9d9d9 solid 1px;
   padding: 5px 10px;
   border-radius: 20px 20px 20px 20px;
-  margin-left: 10px;
 }
 
 /*--------------------SECTION 2-----------------------------------*/
@@ -227,7 +243,7 @@ nav a {
 .card {
   background-color: white;
   border-radius: 20px 20px 20px 20px;
-  border: white solid 4px;
+  padding: 5px;
   padding-bottom: 10px;
   box-shadow: 0 0 1em #d9d9d9;
 }
@@ -239,24 +255,25 @@ nav a {
 }
 .card h4 {
   margin-left: 5px;
+  padding: 5px;
 }
 .card p {
-  margin: 0;
-  padding-left: 5px;
+  margin: 0px;
+  padding-left: 10px;
   font-size: 0.9em;
 }
 #plus {
   border: none;
   font-weight: bolder;
   font-size: 1.2em;
-  padding-top: 30px;
-  padding-left: 40px;
+  padding-top: 0px;
+  padding-left: 20px;
   margin-top: 30px;
   cursor: pointer;
 }
 
 .star {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 /*--------------------SECTION POPULAIRE-----------------------------------*/
@@ -268,13 +285,13 @@ nav a {
 .card2 {
   background-color: white;
   border-radius: 20px 20px 20px 20px;
-  border: white solid 2px;
+  padding: 5px;
   box-shadow: 0 0 1em #d9d9d9;
   margin-bottom: 30px;
-  width: 310px;
+  width: 300px;
   display: block;
   height: 140px;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 .card2 img {
   object-fit: cover;
@@ -285,12 +302,13 @@ nav a {
 }
 .comment {
   display: inline-block;
-  padding-left: 5px;
+  padding: 10px;
   vertical-align: top;
   width: 140px;
 }
 .comment p {
   margin: 0;
+  padding-top: 5px;
   font-size: 0.9em;
 }
 .graph {
@@ -305,7 +323,7 @@ nav a {
   padding-top: 10px;
 }
 .star2 {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 /*--------------------SECTION 3----------------------------------*/
@@ -313,12 +331,14 @@ nav a {
 #activites {
   grid-column: 1 / span 12;
   grid-row: 4;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+#activites h4 {
+  padding-left: 20px;
 }
 #activites h3 {
-  padding: 10px;
+  padding-left: 0;
 }
-
 #section3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -452,35 +472,32 @@ footer li {
     grid-column: 1 / span 12;
     grid-row: 2;
     grid-template-columns: 1fr 1fr;
-
-    border: 0px solid blue;
   }
 
   nav a {
     margin: 0;
   }
   nav ul {
-    border: 0px solid blue;
     list-style-type: none;
-    margin: 0;
-    padding: 10px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    padding-right: 13px;
+    margin-left: -40px;
+    border-bottom: 1px solid #f2f2f2f2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
-  nav li {
-    text-align: center;
-  }
-  nav #order1:link {
-    border-bottom: 1px solid blue;
-    padding: 15px 19px;
-    display: inline-flex;
-  }
-  nav #order2:link {
-    border-bottom: 1px solid #f2f2f2f2;
 
-    padding: 15px 40px;
-    display: inline-flex;
+  nav li a:hover {
+    border-top: 0;
+
+    border-bottom: 1px solid blue;
+  }
+
+  #inscription:hover {
+    border-top: 0;
+    border-bottom: 1px solid blue;
   }
 
   #section_one {
@@ -560,7 +577,7 @@ footer li {
   }
   #plus {
     background: none;
-    margin-left: -5%;
+    font-size: 1.1em;
   }
   #populaires {
     font-size: 0.9em;
@@ -1013,5 +1030,17 @@ footer li {
   }
   footer div {
     margin: 20px 200px 0px 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .container {
+    width: auto;
+  }
+  #subi {
+    display: inline;
+  }
+
+  .fa.loupe {
+    display: none;
   }
 }
