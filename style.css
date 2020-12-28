@@ -66,17 +66,17 @@ header {
 
   grid-column: 12;
 }
-.navigation {
+nav {
   grid-column: 11;
   grid-row: 1;
 }
 
-.navigation ul {
+nav ul {
   list-style-type: none;
   display: flex;
 }
 
-.navigation a {
+nav a {
   margin: 0 0px 0 50px;
   justify-content: space-around;
 }
@@ -447,7 +447,7 @@ footer li {
     margin-right: 10px;
   }
 
-  .navigation {
+  nav {
     order: 3;
     grid-column: 1 / span 12;
     grid-row: 2;
@@ -456,10 +456,10 @@ footer li {
     border: 0px solid blue;
   }
 
-  .navigation a {
+  nav a {
     margin: 0;
   }
-  .navigation ul {
+  nav ul {
     border: 0px solid blue;
     list-style-type: none;
     margin: 0;
@@ -468,15 +468,15 @@ footer li {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .navigation li {
+  nav li {
     text-align: center;
   }
-  .navigation #order1:link {
+  nav #order1:link {
     border-bottom: 1px solid blue;
     padding: 15px 19px;
     display: inline-flex;
   }
-  .navigation #order2:link {
+  nav #order2:link {
     border-bottom: 1px solid #f2f2f2f2;
 
     padding: 15px 40px;
@@ -827,15 +827,15 @@ footer li {
     grid-template-rows: auto;
     width: auto;
   }
-  .navigation {
+  nav {
     margin: 10px 0px 10px 0px;
     grid-column: 8;
     grid-row: 1;
   }
-  .navigation a {
+  nav a {
     margin: 0 20px 0 10px;
   }
-  .navigation a:hover {
+  nav a:hover {
     border-bottom: 1px solid blue;
   }
 
@@ -1015,5 +1015,3 @@ footer li {
     margin: 20px 200px 0px 20px;
   }
 }
-
-
