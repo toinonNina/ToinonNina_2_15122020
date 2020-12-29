@@ -453,3 +453,244 @@ footer li {
   font-size: 1em;
   padding-bottom: 5px;
 }
+/*-----------------------------responsive--------------------------------------------*/
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+       ##Screen = B/w 320px to 479px*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    width: auto;
+  }
+  .container {
+    border-top: white solid 10px;
+    border-right: 0;
+    border-left: white solid 2px;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 9px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  header img {
+    order: 1;
+  }
+  .inscrit {
+    order: 2;
+    margin-right: 10px;
+  }
+
+  nav {
+    order: 3;
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav a {
+    margin: 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    padding-right: 13px;
+    margin-left: -40px;
+    border-bottom: 1px solid #f2f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  nav li a:hover {
+    border-top: 0;
+
+    border-bottom: 1px solid blue;
+  }
+
+  #inscription:hover {
+    border-top: 0;
+    border-bottom: 1px solid blue;
+  }
+
+  #section_one {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  #sub {
+    vertical-align: baseline;
+  }
+
+  #subi {
+    display: none;
+  }
+  .fa.loupe {
+    color: white;
+    display: flex;
+    padding: 10px 10px 0 10px;
+  }
+  #recherche {
+    width: 170px;
+  }
+  #filters {
+    display: inline;
+  }
+  #filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -40px;
+  }
+
+  #filters h2 {
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .cadr {
+    margin: 0 10px 0 0px;
+  }
+  .filtrblue {
+    padding: 10px;
+    margin-right: 5px;
+  }
+  #filters li {
+    margin: 0px 5px 10px 0px;
+  }
+  #information {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .info {
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  #principal {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 10px;
+  }
+  #hebergements {
+    background-color: white;
+    width: auto;
+  }
+  #logement {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    width: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+  #plus {
+    background: none;
+    font-size: 1.1em;
+  }
+  #populaires {
+    font-size: 0.9em;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .card2 img {
+    width: 40%;
+  }
+  .card2 {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #principal h3 {
+    padding-left: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #activites h3 {
+    padding-left: 20px;
+  }
+  #section3 {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .card3:last-child {
+    position: relative;
+  }
+
+  .card3:last-child::after {
+    display: block;
+    width: 11px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  .photo--large {
+    height: 150px;
+    width: 285px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .photo--medium {
+    height: 150px;
+
+    width: 285px;
+  }
+
+  .photo--xs {
+    height: 150px;
+    width: 285px;
+  }
+
+  .photo--small {
+    height: 150px;
+
+    width: 285px;
+  }
+
+  .photo1 img {
+    object-fit: cover;
+    height: 140px;
+    width: 285px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .photo2 img {
+    object-fit: cover;
+    height: 140px;
+    width: 285px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .photo3 img {
+    object-fit: cover;
+    height: 140px;
+    border-radius: 20px 20px 0px 0px;
+    width: 285px;
+  }
+  .photo4 img {
+    object-fit: cover;
+    height: 140px;
+    width: 285px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .photo5 img {
+    object-fit: cover;
+    height: 140px;
+    width: 285px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .photo6 img {
+    object-fit: cover;
+    height: 140px;
+    border-radius: 20px 20px 0px 0px;
+    width: 285px;
+  }
+}
