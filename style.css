@@ -617,6 +617,9 @@ footer li {
   #section3 {
     flex-direction: row;
     height: auto;
+    justify-content: space-around;
+
+    margin-bottom: 40px;
   }
 
   .card3:last-child {
@@ -634,53 +637,53 @@ footer li {
 
   .photo--large {
     height: 150px;
-    width: 285px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
 
   .photo--medium {
     height: 150px;
-    width: 285px;
+    width: 100%;
   }
 
   .photo--xs {
     height: 150px;
-    width: 285px;
+    width: 100%;
   }
 
   .photo--small {
     height: 150px;
-    width: 285px;
+    width: 100%;
   }
 
   .photo1 img {
     object-fit: cover;
     height: 140px;
-    width: 285px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
   .photo2 img {
     object-fit: cover;
     height: 140px;
-    width: 285px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
   .photo3 img {
     object-fit: cover;
     height: 140px;
     border-radius: 20px 20px 0px 0px;
-    width: 285px;
+    width: 100%;
   }
   .photo4 img {
     object-fit: cover;
     height: 140px;
-    width: 285px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
   .photo5 img {
     object-fit: cover;
     height: 140px;
-    width: 285px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
 
@@ -688,7 +691,7 @@ footer li {
     object-fit: cover;
     height: 140px;
     border-radius: 20px 20px 0px 0px;
-    width: 285px;
+    width: 100%;
   }
 }
 
