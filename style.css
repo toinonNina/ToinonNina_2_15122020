@@ -457,7 +457,7 @@ footer li {
 /* ##Device = Most of the Smartphones Mobiles (Portrait)
        ##Screen = B/w 320px to 479px*/
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
   body {
     width: auto;
   }
@@ -472,7 +472,7 @@ footer li {
   h1 {
     font-size: 1.3em;
   }
-
+  /*--------------------HEADER-----------------------------------*/
   header img {
     order: 1;
   }
@@ -505,7 +505,6 @@ footer li {
 
   nav li a:hover {
     border-top: 0;
-
     border-bottom: 1px solid blue;
   }
 
@@ -513,7 +512,7 @@ footer li {
     border-top: 0;
     border-bottom: 1px solid blue;
   }
-
+  /*--------------------SECTION 1-----------------------------------*/
   #section_one {
     grid-column: 1 / span 12;
     grid-row: 2;
@@ -568,6 +567,7 @@ footer li {
     padding: 5px 10px;
     margin-left: 5px;
   }
+  /*--------------------SECTION 2-----------------------------------*/
   #principal {
     display: flex;
     flex-direction: column-reverse;
@@ -606,12 +606,11 @@ footer li {
   }
   #principal h3 {
     padding-left: 20px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
+  /*--------------------SECTION 3-----------------------------------*/
   #activites h3 {
     padding-left: 20px;
   }
@@ -641,7 +640,6 @@ footer li {
 
   .photo--medium {
     height: 150px;
-
     width: 285px;
   }
 
@@ -652,7 +650,6 @@ footer li {
 
   .photo--small {
     height: 150px;
-
     width: 285px;
   }
 
@@ -692,5 +689,230 @@ footer li {
     height: 140px;
     border-radius: 20px 20px 0px 0px;
     width: 285px;
+  }
+}
+
+/*----------------------------------------TABLETTE---------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    width: auto;
+  }
+  .container {
+    border-top: white solid 10px;
+    border-right: 0;
+    border-left: white solid 2px;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 9px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+  /*--------------------HEADER-----------------------------------*/
+  header img {
+    order: 1;
+  }
+  .inscrit {
+    order: 2;
+    margin-right: 10px;
+  }
+
+  nav {
+    order: 3;
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav a {
+    margin: 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    padding-right: 13px;
+    margin-left: -40px;
+    border-bottom: 1px solid #f2f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  nav li a:hover {
+    border-top: 0;
+    border-bottom: 1px solid blue;
+  }
+
+  #inscription:hover {
+    border-top: 0;
+    border-bottom: 1px solid blue;
+  }
+  /*--------------------SECTION 1-----------------------------------*/
+  #section_one {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  #sub {
+    vertical-align: baseline;
+  }
+
+  #subi {
+    display: none;
+  }
+  .fa.loupe {
+    color: white;
+    display: flex;
+    padding: 10px 10px 0 10px;
+  }
+  #recherche {
+    width: 270px;
+  }
+  #filters {
+    display: inline;
+  }
+  #filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -40px;
+  }
+
+  #filters h2 {
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .cadr {
+    margin: 0 10px 0 0px;
+  }
+  .filtrblue {
+    padding: 10px;
+    margin-right: 5px;
+  }
+  #filters li {
+    margin: 0px 5px 10px 0px;
+  }
+  #information {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .info {
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  /*--------------------SECTION 2-----------------------------------*/
+
+  #principal {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 10px;
+    width: 100%;
+  }
+
+  #flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #hebergements {
+    background: none;
+  }
+
+  #logement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+
+  #plus {
+    background: none;
+  }
+  /*--------------------SECTION 3-----------------------------------*/
+
+  #activites h3 {
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  #section3 {
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  #section3 a {
+    height: 190px;
+    width: 300px;
+    margin-top: 20px;
+  }
+  .photo--large {
+    height: 150px;
+    width: 255px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .photo--medium {
+    height: 150px;
+    width: 205px;
+  }
+
+  .photo--xs {
+    height: 150px;
+    width: 205px;
+  }
+
+  .photo--small {
+    height: 150px;
+    width: 205px;
+  }
+
+  .photo1 img {
+    object-fit: cover;
+    height: 140px;
+    width: 300px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .photo2 img {
+    object-fit: cover;
+    height: 140px;
+    width: 300px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .photo3 img {
+    object-fit: cover;
+    height: 140px;
+    border-radius: 20px 20px 0px 0px;
+    width: 300px;
+  }
+  .photo4 img {
+    object-fit: cover;
+    height: 140px;
+    width: 300px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .photo5 img {
+    object-fit: cover;
+    height: 140px;
+    width: 300px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .photo6 img {
+    object-fit: cover;
+    height: 140px;
+    border-radius: 20px 20px 0px 0px;
+    width: 300px;
+  }
+  /*--------------------FOOTER-----------------------------------*/
+  footer {
+    background-color: #f2f2f2;
+  }
+  footer div {
+    margin: 20px 10px 0px 60px;
+    flex-direction: row;
   }
 }
