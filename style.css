@@ -671,29 +671,31 @@ footer li {
   }
 
   #section3 a {
-    height: 190px;
+    height: 130px;
     width: 100%;
     margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
   }
 
   .photo--large {
-    height: 150px;
+    height: 130px;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
 
   .photo--medium {
-    height: 150px;
+    height: 130px;
     width: 100%;
   }
 
   .photo--xs {
-    height: 150px;
+    height: 130px;
     width: 100%;
   }
 
   .photo--small {
-    height: 150px;
+    height: 130px;
     width: 100%;
   }
   .photo1 {
@@ -701,39 +703,39 @@ footer li {
   }
 
   .photo1 h4 {
-    margin-top: 190px;
+    margin-top: 130px;
   }
   .photo2 {
     width: 100%;
   }
   .photo2 h4 {
-    margin-top: 190px;
+    margin-top: 130px;
   }
 
   .photo3 {
     width: 100%;
   }
   .photo3 h4 {
-    margin-top: 190px;
+    margin-top: 130px;
   }
   .photo4 {
     width: 100%;
   }
   .photo4 h4 {
-    margin-top: 190px;
+    margin-top: 130px;
   }
   .photo5 {
     width: 100%;
   }
   .photo5 h4 {
-    margin-top: 190px;
+    margin-top: 130px;
   }
   .photo6 {
     width: 100%;
   }
 
   .photo6 h4 {
-    margin-top: 190px;
+    margin-top: 130px;
   }
 
   footer div {
